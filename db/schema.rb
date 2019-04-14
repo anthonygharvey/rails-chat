@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_14_131657) do
+ActiveRecord::Schema.define(version: 2019_04_14_172044) do
 
-  create_table "room_mesages", force: :cascade do |t|
+  create_table "room_messages", force: :cascade do |t|
     t.integer "room_id"
     t.integer "user_id"
     t.text "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["room_id"], name: "index_room_mesages_on_room_id"
-    t.index ["user_id"], name: "index_room_mesages_on_user_id"
+    t.index ["room_id"], name: "index_room_messages_on_room_id"
+    t.index ["user_id"], name: "index_room_messages_on_user_id"
   end
 
   create_table "rooms", force: :cascade do |t|
