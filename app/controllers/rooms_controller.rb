@@ -14,6 +14,7 @@ class RoomsController < ApplicationController
 			flash[:success] = "Room #{@room.name} was created successfully"
 			redirect_to rooms_path
 		else
+			flash.now[:error] = "Room #{@room.name} was not created"
 			render :new
 		end
 	end
@@ -26,6 +27,7 @@ class RoomsController < ApplicationController
 			flash[:success] = "Room #{@room.name} was updated successfully"
 			redirect_to rooms_path
 		else
+			flash.now[:error] = "Room #{@room.name} was not updated"
 			render :new
 		end
 	end
